@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-08-01T16:16:57.748Z",
+    "end": "2023-08-01T16:17:07.684Z",
+    "duration": 9936,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02483065-83f0-4b71-a076-a4781e10afcf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login-incorreto.spec.cy.js",
+      "file": "cypress\\e2e\\login-incorreto.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ddecb8c5-122d-4b62-9f04-81b38bc6759b",
+          "title": "Página de login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verificar mensagem de campos obrigatórios",
+              "fullTitle": "Página de login Verificar mensagem de campos obrigatórios",
+              "timedOut": null,
+              "duration": 1584,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://3076-cypress-alurapic-front.vercel.app/#/home');\ncy.contains('User name is required!').should('be.visible');\ncy.contains('Password is required!').should('be.visible');",
+              "err": {},
+              "uuid": "b38f1211-580a-44bf-91a3-1f346ba4ea1a",
+              "parentUUID": "ddecb8c5-122d-4b62-9f04-81b38bc6759b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve falhar mesmo que os campos digitados estejam corretos",
+              "fullTitle": "Página de login Deve falhar mesmo que os campos digitados estejam corretos",
+              "timedOut": null,
+              "duration": 5523,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('gabrielirt', '12345678');\ncy.wait('@stubPost');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '(Logout)' within the selector: 'a' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: '(Logout)' within the selector: 'a' but never did.\n    at Context.eval (webpack:///./cypress/support/commands.js:8:33)",
+                "diff": null
+              },
+              "uuid": "07d2078f-3d0e-4757-a443-f31aab49e595",
+              "parentUUID": "ddecb8c5-122d-4b62-9f04-81b38bc6759b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b38f1211-580a-44bf-91a3-1f346ba4ea1a"
+          ],
+          "failures": [
+            "07d2078f-3d0e-4757-a443-f31aab49e595"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7107,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
